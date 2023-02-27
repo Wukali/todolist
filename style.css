@@ -2,11 +2,12 @@
     --blue: #0077cc; 
     --orange: #e67e22; 
     --white: #ffffff; 
-    --dark: #333; 
+    --dark: #1f1e2b; 
     --red: #ff0000; 
     --pink: #db3cd8;
-    --purple: #941aeb; 
-
+    --purple: #a303ee; 
+    --grey: #686868;
+    --darkblue: #332a61;
   }
   
 
@@ -19,33 +20,136 @@
   }
   
   /* Set a default font family */
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: var(--dark)
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--dark);
+  color: #FFF;
+  
+}
+
   
   /* Set default styles for headings */
-  h1, h2, h3, h4, h5, h6 {
+  /* h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
     margin-bottom: 1rem;
-  }
-  
+    color: var(--purple); */
+
+header{
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1{
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 2rem;
+}
+
+#new-task-form {
+  display: flex;
+}
+
+input, button{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+}
+
+#new-task-input{
+  flex: 1 1 0%;
+  background-color: var(--darkblue);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+#new-task-input::placeholder{
+  /* font-size: 2.5rem; */
+  /* font-weight: 300; */
+  /* font-weight: bold; */
+  color: var(--purple);
+  /* margin-bottom: 1rem; */
+
+}
+
+#new-task-submit{
+  color: var(--pink);
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  background-image: linear-gradient(to right, var(--grey), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#new-task-submit:hover{
+  opacity: 0.8;
+}
+
+#new-task-submit:active{
+  opacity: 0.6;
+}
+
+h2{
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+
+main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.task-list h2{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--grey);
+  margin-bottom: 1rem;  
+}
+
+#tasks .task{
+display: flex;
+justify-content: space-between;
+background-color: var(--purple);
+padding: 1rem;
+border-radius: 1rem;
+margin-bottom: 1rem;
+
+}
+
   /* Set default styles for paragraphs */
-  p {
+  /*p {
     margin-bottom: 1rem;
   }
   
   /* Set default styles for links */
-  a {
+  /*a {
     color: #0077cc;
     text-decoration: none;
   }
   
   /* Set default styles for buttons */
-  button {
+  /*button {
     border: none;
     background-color: #0077cc;
     color: #fff;
@@ -56,13 +160,13 @@
   }
   
   /* Set default styles for images */
-  img {
+  /*img {
     max-width: 100%;
     height: auto;
   }
   
   /* Set default styles for lists */
-  ul, ol {
+  /* ul, ol {
     margin-bottom: 1rem;
   }
   
@@ -71,7 +175,7 @@
   }
   
   /* Set default styles for form elements */
-  input, textarea {
+  /*input, textarea {
     border: 1px solid #ccc;
     border-radius: 0.25rem;
     padding: 0.5rem;
@@ -79,17 +183,17 @@
   }
   
   /* Set default styles for form labels */
-  label {
+  /*label {
     display: block;
     margin-bottom: 0.5rem;
   }
   
-#new-task-input{
+/* #new-task-input{
     background-color: #e2eef7;
     color: #fff;
-}
-#new-task-submit{
-    box-shadow: 0px 0px 0px 2px #9fb4f2;
+} */
+/*#new-task-submit{
+  box-shadow: 0px 0px 0px 2px #9fb4f2;
 	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
 	background-color:#7892c2;
 	border-radius:10px;
@@ -100,11 +204,11 @@
 	font-family:Arial;
 	/*font-size:19px;*/
 	/* padding:12px 37px; */
-	text-decoration:none;
-	text-shadow:0px 1px 0px #283966;
+	/*text-decoration:none;
+	/*text-shadow:0px 1px 0px #283966;
 }
   /* Set default styles for form buttons */
-  input[type="submit"] {
+  /*input[type="submit"] {
     border: none;
     background-color: #0077cc;
     color: #fff;
@@ -112,6 +216,4 @@
     border-radius: 0.25rem;
     cursor: pointer;
   }
-  
-
   
